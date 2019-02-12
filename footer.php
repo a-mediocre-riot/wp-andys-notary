@@ -9,6 +9,12 @@
  * @package Andy\'s_Notary
  */
 
+	$footerHeader    = get_field("footer_header");
+	$footerContent   = get_field("footer_content");
+	$footerLink      = get_field("footer_link");
+	$footerLinkText  = get_field("footer_link_text");
+	$footerCopyright = get_field("footer_copyright");
+
 ?>
 
 	</div><!-- #content -->
@@ -17,15 +23,15 @@
 	<footer class="container-fluid text-center">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
-				<h3>Click the button below to sign up for our newsletter.</h3>
-				<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus consequatur iusto repellat. A perspiciatis illo eius tempore? Ea, reprehenderit perferendis possimus similique omnis, alias sapiente cum quidem non facilis natus.</small><br>
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#conversion-modal">Call to Action</button>
+				<h3><?php echo $footerHeader; ?></h3>
+				<small><?php echo $footerContent; ?></small><br>
+				<a href="<?php echo $footerLink ?>" class="btn btn-primary"><?php echo $footerLinkText; ?></a>
 			</div><!--.col-sm-8-->
 		</div><!--.row-->
 
 		<div class="row lower">
 			<div class="col-sm-4 col-sm-offset-2 text-left">
-				<?php 
+				<?php
 					wp_nav_menu(array(
 						'menu'        => 'Social Menu',
 						'menu_class'  => 'social-menu',
@@ -35,24 +41,10 @@
 				?>
 			</div>
 			<div class="col-sm-4 text-right">
-				&copy; 2017 Andy's Notary
+				<?php echo $footerCopyright ?>
 			</div>
 		</div><!--.row-->
 	</footer>
-
-	<div class="modal fade" id="conversion-modal" tabindex="-1" role="dialog" dia-labelledby="conversion-modal-label">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="conversion-modal-label">Call to Action</h4>
-				</div><!--.modal-header-->
-				<div class="modal-body">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, sed, impedit. Debitis dignissimos amet magnam quidem, quaerat adipisci asperiores eligendi obcaecati eius sed, minima eaque cumque corrupti cupiditate labore eum!</p>
-				</div>
-			</div><!--.modal-content-->
-		</div><!--.modal-dialog-->
-	</div><!--.modal-->
 
 </div><!-- #page -->
 

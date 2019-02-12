@@ -10,20 +10,20 @@
 
 
 	$path = get_template_directory_uri();
-	
+
 	$heroHeader      = get_field("home_hero_header");
 	$heroSubheader   = get_field("home_hero_subheader");
 	$heroBtnText     = get_field("home_hero_btn_text");
 	$heroBtnLink     = get_field("home_hero_btn_link");
-	
+
 	$section1Header  = get_field("home_sec1_header");
 	$section1Content = get_field("home_sec1_content");
 	$section1Image   = get_field("home_sec1_img");
-	
+
 	$section2Header  = get_field("home_sec2_header");
 	$section2Content = get_field("home_sec2_content");
 	$section2Image   = get_field("home_sec2_img");
-	
+
 	$servicesHeader  = get_field("home_service_header");
 	$service1Class   = get_field("home_service1_class");
 	$service1Title   = get_field("home_service1_title");
@@ -38,7 +38,7 @@
 	$service4Title   = get_field("home_service4_title");
 	$service4Text    = get_field("home_service4_text");
 
-	get_header(); 
+	get_header();
 ?>
 
 <!-- HERO -->

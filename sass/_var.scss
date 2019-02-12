@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway');
 
+$root: "/wp-content/themes/wp-andys-notary";
+
 $color-black: #141414; // Licorice     - Off-Black
 $color-dark:  #2F3542; // Gunmetal     - Muted Navy
 $color-bold:  #326273; // Myrtle Green - Muted Teal
 $color-light: #DBD2CE; // Timberwolf   - Light Tan
 $color-white: #F5F1ED; // Isabelline   - Light Cream
 
-$color-dark-text: $color-black;
+$color-dark-text:  $color-black;
 $color-light-text: $color-white;
 
 $color-bg: $color-white;
@@ -22,10 +24,10 @@ $browser-context: 16;
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
     }
-    
+
     @if (unitless($context)) {
         $context: $context * 1px;
     }
-    
+
     @return $pixels / $context * 1rem;
 }
